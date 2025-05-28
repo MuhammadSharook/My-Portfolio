@@ -160,7 +160,6 @@ window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', () => {
 
      const logo = document.getElementById('logo');
-     const logoContainer = document.querySelector('logoContainer');
      const word = "MS";
 
      // create each letter with individual animation delay
@@ -168,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const letter = document.createElement('span');
           letter.className = 'letter';
           letter.textContent = word[i];
-          letter.style.animationDelay = `${i * 0.15}s`; // stagger the animation
+          letter.style.animationDelay = `${i * 0.1}s`; // stagger the animation
           logo.appendChild(letter);
      }
 
