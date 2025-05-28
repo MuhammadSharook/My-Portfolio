@@ -154,3 +154,30 @@ window.addEventListener('load', () => {
      document.querySelector('.home').classList.add('visible');
 });
 
+
+//  Logo animation
+
+document.addEventListener('DOMContentLoaded', () => {
+
+     const logo = document.getElementById('logo');
+     const logoContainer = document.querySelector('logoContainer');
+     const word = "MS";
+
+     // create each letter with individual animation delay
+     for(let i = 0; i < word.length; i++) {
+          const letter = document.createElement('span');
+          letter.className = 'letter';
+          letter.textContent = word[i];
+          letter.style.animationDelay = `${i * 0.15}s`; // stagger the animation
+          logo.appendChild(letter);
+
+          // create stars around each letter
+          createStars(letter);
+     }
+
+     setInterval(createStars, 3000); // create stars every 3 seconds
+});
+
+function createStars(letter) {
+     
+}
