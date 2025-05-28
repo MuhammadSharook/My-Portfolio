@@ -170,14 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
           letter.textContent = word[i];
           letter.style.animationDelay = `${i * 0.15}s`; // stagger the animation
           logo.appendChild(letter);
-
-          // create stars around each letter
-          createStars(letter);
      }
 
-     setInterval(createStars, 3000); // create stars every 3 seconds
 });
-
-function createStars(letter) {
-     
-}
